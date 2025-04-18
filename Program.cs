@@ -108,7 +108,7 @@ internal class Program
                 Console.WriteLine(" добавлено в файл baobab.txt");
             }
 
-            else if(numberOfTask == "4")
+            else if(numberOfTask == "4")//задание 4
             {
                 ListAndFileWorker.somethingToFileBinary("C:/Users/алексей/Desktop/f.txt");
 
@@ -144,7 +144,7 @@ internal class Program
 
             }
 
-            else if (numberOfTask == "6")
+            else if (numberOfTask == "6")//задание 6
             {
                 Console.WriteLine("Прошу заполнить список, на q закончить ввод");
                 List<string> list = ListOnly.makeListFull([]);
@@ -159,7 +159,7 @@ internal class Program
 
             }
 
-            else if (numberOfTask == "7")
+            else if (numberOfTask == "7")//задание 7
             {
                 Console.WriteLine("Прошу заполнить список, на q закончить ввод");
                 List<string> list = ListOnly.makeListFull([]);

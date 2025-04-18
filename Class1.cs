@@ -5,7 +5,7 @@ namespace lab2
 {
     class ListOnly
     {
-        public static List<string> makeListFull(List<string> list)
+        public static List<string> makeListFull(List<string> list)//заполнение списка пользователем
         {
             Console.WriteLine("Введите что-то");
             string element = Console.ReadLine();
@@ -18,7 +18,7 @@ namespace lab2
             return list;
         }
 
-        public static void printList(List<string> list)
+        public static void printList(List<string> list)//вывод списка
         {
             foreach (string el in list)
             {
@@ -27,13 +27,13 @@ namespace lab2
             Console.WriteLine();
         }
 
-        public static LinkedList<string> fromListToLinkedList(List<string> list)
+        public static LinkedList<string> fromListToLinkedList(List<string> list)//перенос списка в двусвязный список
         {
             LinkedList<string> L = new LinkedList<string>(list);
             return L;
         }
 
-        public static List<string> deleteDublicates(List<string> list)
+        public static List<string> deleteDublicates(List<string> list)//удалить повторы в списке
         {
             string elementBefore = "q";
             for (int i =0;i<list.Count;i++)

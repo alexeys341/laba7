@@ -7,7 +7,7 @@ namespace lab2
 {
     class ListAndFileWorker
     {
-        public static float maxInList(string[] list)
+        public static float maxInList(string[] list)//нахождение максимума в массиве
         {
             float max = 0;
             try
@@ -36,7 +36,7 @@ namespace lab2
             return max;
         }
 
-        public static float minInList(string[] list)
+        public static float minInList(string[] list)//нахождение минимума в массиве
         {
             float min = 0;
             try
@@ -65,7 +65,7 @@ namespace lab2
             return min;
         }
 
-        public static float summaOddElements (string[] list)
+        public static float summaOddElements (string[] list)//сумма нечетных элементов массива
         {
             {
                 float min = 0;
@@ -101,7 +101,7 @@ namespace lab2
             }
         }
 
-        public static int counterOfWtf(string[] list)
+        public static int counterOfWtf(string[] list)//считает число удвоенных нечетных чисел
         {
             int counter = 0;
 
@@ -123,13 +123,13 @@ namespace lab2
             return counter;
         }
 
-        public static void createFile(string filename)
+        public static void createFile(string filename)//создание файла
         {
             FileStream file = File.Create(filename);
             file.Close();
         }
 
-        public static string[] fromFileToList(string filename)
+        public static string[] fromFileToList(string filename)//из файла в массив
         {
             string finalLine = "";
             try
@@ -154,7 +154,7 @@ namespace lab2
             return fileNumbers;
         }
 
-        public static string[] fromFileToLetterArray(string filename)
+        public static string[] fromFileToLetterArray(string filename)//из файла в массив последние символы строки
         {
             string finalLine = "";
             try
@@ -180,7 +180,7 @@ namespace lab2
         }
 
 
-        public static void fromListToFile(string filename, string[] list)
+        public static void fromListToFile(string filename, string[] list)//из массива в файл
         {
             try
             {
@@ -204,7 +204,7 @@ namespace lab2
             }
         }
 
-        public static void somethingToFile(string filename)
+        public static void somethingToFile(string filename)//рандомное заполнение файла
         {
             StreamWriter file = new StreamWriter(filename);
             Random rand = new Random();
@@ -225,7 +225,7 @@ namespace lab2
             file.Close();
         }
 
-        public static void somethingToFile(string filename, byte len)
+        public static void somethingToFile(string filename, byte len)//рандомное заполнение файла с фиксированной длиной строки
         {
             StreamWriter file = new StreamWriter(filename);
             Random rand = new Random();
@@ -251,7 +251,7 @@ namespace lab2
             file.Close();
         }
 
-        public static void somethingToFileBinary(string filename)
+        public static void somethingToFileBinary(string filename)//заполнение бинарного файла
         {
             using BinaryWriter file = new BinaryWriter(File.Open(filename, FileMode.OpenOrCreate));
             {
@@ -265,7 +265,7 @@ namespace lab2
             }
         }
 
-        public static string[] somethingFromFileBinary(string filename)
+        public static string[] somethingFromFileBinary(string filename)//считывание из бинарного файла
         {
             using BinaryReader file = new BinaryReader(File.Open(filename, FileMode.OpenOrCreate));
             {
